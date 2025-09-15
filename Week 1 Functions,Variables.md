@@ -1,7 +1,8 @@
 ## **Introduction: Your First Steps in Python**
 <p align="center">
-  <img src="frieren.png"/>
+  <img src="pictures/Frieren.png"/>
 </p>
+
 - Welcome to Python! 
 - Week 1 is all about learning the fundamental building blocks of the language. 
 - We'll cover how to display information, 
