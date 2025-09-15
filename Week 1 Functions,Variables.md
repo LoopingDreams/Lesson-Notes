@@ -47,6 +47,7 @@
   ```python
   print("hello, world")
   ```
+  ```
 - Python is **interpreted** (executes line by line)
 
 ---
@@ -60,11 +61,13 @@
 - The text you want to print, like `"hello, world"`, is called a **string** (or `str`). A string is a sequence of characters, and you must enclose it in either double quotes (`"`) or single quotes 
 - (`'`).
 - Example:
+  
   ```python
  # The text "hello, world" is an argument passed to the print function. print("hello, world")
   print("Hello, World!")
 
   ```
+```
 
 ---
 
