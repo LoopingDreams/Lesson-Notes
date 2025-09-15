@@ -1,7 +1,7 @@
 
 ## **Introduction to Conditionals**
 
-In programming, **conditionals** are statements that allow your code to make decisions and execute different blocks of code based on whether certain conditions are `True` or `False`. Think of it as asking a question and then performing an action based on the answer. 🤔
+In programming, **conditionals** are statements that allow your code to make decisions and execute different blocks of code based on whether certain conditions are `True` or `False`. Think of it as asking a question and then performing an action based on the answer. 
 
 ---
 
