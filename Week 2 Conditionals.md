@@ -1,7 +1,23 @@
-
+![[Marin_Kitagawa_automate_the_boring_stuff_with_python.png]]
 ## **Introduction to Conditionals**
 
 In programming, **conditionals** are statements that allow your code to make decisions and execute different blocks of code based on whether certain conditions are `True` or `False`. Think of it as asking a question and then performing an action based on the answer. 
+
+ This decision-making process is fundamental to creating any useful software, from a simple game that asks "Did the player find the key?" to a web browser that asks "Did the user click this link?".
+ 
+---
+
+
+## **Booleans: The Language of Logic**
+
+Before we can make decisions, we need to understand the language of logic. In Python, this comes down to a special data type called a **boolean** (or `bool`). A boolean can only have one of two possible values:
+
+- `True`
+    
+- `False`
+    
+
+Every conditional statement in Python ultimately boils down to evaluating whether a condition is `True` or `False`.
 
 ---
 
@@ -9,22 +25,22 @@ In programming, **conditionals** are statements that allow your code to make dec
 
 To ask questions, Python uses **comparison operators**. These operators compare two values and evaluate to either `True` or `False`.
 
-|Operator|Meaning|Example|Result|
-|---|---|---|---|
-|`==`|Equal to|`x == y`|`True`|
-|`!=`|Not equal to|`x != y`|`False`|
-|`<`|Less than|`x < y`|`False`|
-|`>`|Greater than|`x > y`|`True`|
-|`<=`|Less than or equal to|`x <= y`|`True`|
-|`>=`|Greater than or equal to|`x >= y`|`True`|
+| Operator | Meaning                  | Example  | Result  |
+| -------- | ------------------------ | -------- | ------- |
+| `==`     | Equal to                 | `x == y` | `True`  |
+| `!=`     | Not equal to             | `x != y` | `False` |
+| `<`      | Less than                | `x < y`  | `False` |
+| `>`      | Greater than             | `x > y`  | `True`  |
+| `<=`     | Less than or equal to    | `x <= y` | `True`  |
+| `>=`     | Greater than or equal to | `x >= y` | `True`  |
 
 _(Assuming `x = 10` and `y = 10` for the examples in the table, except where noted)_
 
-Let's see them in action with a simple program that compares two numbers.
+Let's create a simple program that compares numbers
 
 Python
 
-```
+```Python
 # Get input from the user and convert to integers
 x = int(input("What's x? "))
 y = int(input("What's y? "))
@@ -55,7 +71,7 @@ A more efficient way to structure conditional logic is by using an `if-elif-else
 
 Python
 
-```
+```Python
 # A more efficient way to compare x and y
 x = int(input("What's x? "))
 y = int(input("What's y? "))
@@ -68,7 +84,7 @@ else:
     print("x is equal to y")
 ```
 
-In this version, if `x < y` is `True`, Python prints the corresponding message and skips the `elif` and `else` checks entirely. Much better! ✅
+In this version, if `x < y` is `True`, Python prints the corresponding message and skips the `elif` and `else` checks entirely. Much better! 
 
 ---
 
@@ -82,7 +98,7 @@ The `or` operator evaluates to `True` if **at least one** of its conditions is t
 
 Python
 
-```
+```Python
 # Example of 'or'
 x = int(input("What's x? "))
 y = int(input("What's y? "))
@@ -101,7 +117,7 @@ The `and` operator evaluates to `True` only if **all** of its conditions are tru
 
 Python
 
-```
+```Python
 # Example of 'and' for grading
 score = int(input("Score: "))
 
@@ -116,7 +132,7 @@ This can be simplified in Python using chaining:
 
 Python
 
-```
+```Python
 # A more Pythonic way to write the same logic
 score = int(input("Score: "))
 
@@ -130,6 +146,19 @@ elif 60 <= score < 70:
     print("Grade: D")
 else:
     print("Grade: F")
+```
+
+### The `not` Operator
+
+The `not` operator is simple: it **inverts** a boolean value. `not True` becomes `False`, and `not False` becomes `True`.
+
+Python
+
+```python
+is_raining = False
+
+if not is_raining:
+    print("It's a sunny day!") # This will print
 ```
 
 ---
@@ -146,7 +175,7 @@ npmod2==1quadif n is odd
 
 Python
 
-```
+```Python
 # Get a number from the user
 x = int(input("What's x? "))
 
@@ -167,7 +196,7 @@ Let's create a function `is_even` that returns `True` if a number is even and `F
 
 Python
 
-```
+```Python
 def main():
     x = int(input("What's x? "))
     if is_even(x):
@@ -192,7 +221,7 @@ Introduced in Python 3.10, the `match` statement is a powerful tool for pattern 
 
 Python
 
-```
+```Python
 # Example: Getting a student's house at Hogwarts
 name = input("What's your name? ")
 
@@ -211,3 +240,25 @@ In this example:
 - The `|` acts like an `or`, matching any of the names in the list.
     
 - `case _:` is the default case, catching any input that didn't match the patterns above. It's similar to an `else` block.
+
+---
+
+## **The Ternary Operator (A Concise `if-else`)**
+
+For simple `if-else` assignments, Python provides a one-line syntax called the **ternary operator**. It's great for readability when the logic is simple.
+
+**Syntax:** `value_if_true if condition else value_if_false`
+
+Python
+
+```python
+def main():
+    x = int(input("What's x? "))
+    # The ternary operator reads like an English sentence.
+    result = "Even" if is_even(x) else "Odd"
+    print(result)
+
+def is_even(n):
+    return n % 2 == 0
+
+main()
