@@ -1,7 +1,31 @@
-## **Introduction: Your First Steps in Python**
+## Table of Contents
+- [Introduction: Your First Steps in Python](#introduction-your-first-steps-in-python)
+- [Introduction to Programming](#introduction-to-programming)
+- [Algorithms & Pseudocode](#algorithms--pseudocode)
+- [Creating Code in Python](#creating-code-in-python)
+- [Functions](#functions)
+- [Bugs](#bugs)
+- [Strings](#strings)
+- [Improvements](#improvements)
+- [Comments](#comments)
+- [Input](#input)
+- [Variables](#variables)
+- [Strings and Parameters](#strings-and-parameters)
+- [A small problem with quotation marks](#a-small-problem-with-quotation-marks)
+- [Formatting Strings (f-Strings)](#formatting-strings-f-strings)
+- [More on Strings](#more-on-strings)
+- [Integers or `int`](#integers-or-int)
+- [Readability Wins](#readability-wins)
+- [Float Basics & More on Floats](#float-basics--more-on-floats)
+- [`def`](#def)
+- [Returning Values](#returning-values)
+- [Summing Up](#summing-up)
+## **Introduction-your-first-steps-in-python**
+
 <p align="center">
-  <img src="pictures/Frieren.png"/>
+  <img src="frieren.png"/>
 </p>
+
 
 - Welcome to Python! 
 - Week 1 is all about learning the fundamental building blocks of the language. 
@@ -19,7 +43,7 @@
 
 ---
 
-## Algorithms & Pseudocode
+# algorithms--pseudocode
 - **Algorithm** = step-by-step procedure to solve a problem
 - **Pseudocode** = human-readable outline of an algorithm
 - Helps bridge **ideas → actual code**
@@ -33,7 +57,7 @@
 
 ---
 
-## Creating Code in Python
+# Creating Code in Python
 - The very first thing you typically do in a new language is make it say something. In Python, we use the `print()` function for this.
 - VS Code is a text editor. In addition to editing text, you can visually browse files and run text-based commands at a terminal.
 - In the terminal, you can execute `code hello.py` to start coding.
@@ -47,7 +71,6 @@
   ```python
   print("hello, world")
   ```
-  ```
 - Python is **interpreted** (executes line by line)
 
 ---
@@ -59,26 +82,19 @@
 - [An Example List of functions](https://www.w3schools.com/python/python_ref_functions.asp)
 - Functions can take **arguments (inputs)**
 - The text you want to print, like `"hello, world"`, is called a **string** (or `str`). A string is a sequence of characters, and you must enclose it in either double quotes (`"`) or single quotes 
-- (`'`).
-- Example:
+- (`'`). Example:
+  ```python 
   
-  ```python
- # The text "hello, world" is an argument passed to the print function. print("hello, world")
-  print("Hello, World!")
-
-  ```
-```
+  print("Hello, World!") #The text "hello, world" is an argument passed to the print function. print("hello, world")
 
 ---
-
 # Bugs 
-
 - A **bug** is an error in your program. A common early bug is a `SyntaxError`, which means you've broken one of Python's grammar rules.
--  Bugs are a natural part of coding. These are mistakes, problems for you to solve! Don’t get discouraged! 
+- Bugs are a natural part of coding. These are mistakes, problems for you to solve! Don’t get discouraged! 
 - Error messages can often inform you of your mistakes and provide clues on how to fix them. However, there will be many times when the interpreter is not this helpful.
 
 ```python
-# This will cause a SyntaxError because the closing quote is missing.
+#This will cause a SyntaxError because the closing quote is missing.
 print("hello, world)
 ```
 
@@ -161,7 +177,7 @@ print(name)
 
 ---
 
-## **Strings and Parameters**
+## **Strings-and-Parameters**
 
 - A **string** (or `str`) is a sequence of characters, like text.
 - Looking back a bit in our code, there's a visual side effect of having the result appearing in another line
@@ -192,7 +208,7 @@ print("hello,", name)
 
 ---
 
-## **A small problem with quotation marks**
+## **A-small-problem-with-quotation marks**
 
 If your string needs to contain a quote, you can either enclose the string with the _other_ type of quote or use a backslash (`\`) to **escape** the inner quote.
 
@@ -208,7 +224,7 @@ print("She said, \"Hi!\"")
 
 ---
 
-## **Formatting Strings (f-Strings)**
+## **Formatting-Strings-(f-Strings)**
 
 The best way to embed variables directly into strings is with **f-strings** (formatted strings). Simply prefix the string with an `f` and place your variables inside curly braces `{}`.
 
@@ -222,7 +238,7 @@ print(f"hello, {name}")
 
 ---
 
-## **More on Strings**
+## **More-on-Strings**
 
 Strings come with built-in functions called **methods**. You call them using dot notation (`variable.method()`). You can also **chain** methods together to perform multiple actions in one line.
 
@@ -267,7 +283,7 @@ print(f"hello, {name}")
 
 ---
 
-## **Integers or `int`**
+## **Integers-or-`int`**
 
 -   In Python, an integer is referred to as an `int`.
 
@@ -330,7 +346,7 @@ print(x + y)
 
 ---
 
-## **Readability Wins**
+## **Readability-Wins**
 
 Regardless of what approach you take to a programming task, remember that your code must be **readable.** You should use comments to give yourself and others clues about what your code is doing. Further, you should create code in a way that is readable.
 
@@ -338,7 +354,7 @@ While you can nest functions like `print(int(input("x: ")) + int(input("y: ")))`
 
 ---
 
-## **Float Basics & More on Floats**
+## **Float-Basics--More-on-Floats**
 
 A **float** is a number with a decimal point. Just like with integers, you can cast strings to floats using the `float()` function.
 
@@ -408,7 +424,7 @@ When the code calls `hello(name)` from inside the `main` function, the value sto
 
 ---
 
-## **Returning Values**
+## **Returning-Values**
 
 Functions can send data back to the code that called them using the `return` keyword. This is incredibly powerful because it allows you to get a result from a function and store it in a variable.
 
@@ -436,7 +452,7 @@ A step by step breakdown of this would be
     
 3. The next line is `print("x squared is", square(x))`. Before `print` can do its job, it needs to get a value from the `square(x)` part.
     
-4. Python **calls** the `square` function, passing the value of `x` (which is `5`) as the argument for the parameter `n`.
+4. Python **calls** the `square` function, passing the value of `x` (which is `5`) as the argument for the parameter `n`.s
     
 5. Inside `square`, `n * n` is calculated (`5 * 5 = 25`).
     
